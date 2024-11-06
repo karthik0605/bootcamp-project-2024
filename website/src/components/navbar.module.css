@@ -1,0 +1,34 @@
+/* CSS for navigation bar */
+
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    z-index: 10;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  
+    background-color: black;
+    color: white;
+    padding: 0px 0px;
+    box-shadow: 0 2px 5px blue;
+  }
+
+  /*change whenever*/
+
+  .navbar h1{
+      text-align: center;
+  }
+  
+  .navList {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 30px;
+    list-style: none;
+  }
