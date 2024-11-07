@@ -2,26 +2,27 @@ import React from "react";
 import style from "./portfolio.module.css";
 import Link from "next/link";
 
+//change all href to links
+//change css to styles
+//if I get more projects then I can map each one
 export default function Portfolio() {
   return (
     <header className={style.portfolio}>
       <h1 className="page-title">Portfolio</h1>
-      <div className="project">
-        <a href="index.html">
-          <img
-            src="./images/Home.jpg"
-            alt="a picture of some mountains with a cool sky"
-            width="300"
-            height="200"
-          />
-        </a>
-        <div className="project-details">
-          <p className="project-name">Karthik's Website</p>
-          <p className="project-details">
+      <div className={style.project}>
+        <img
+          src="/Home.jpg"
+          alt="a picture of some mountains with a cool sky"
+          width="300"
+          height="200"
+        />
+        <div className={style.projectDetails}>
+          <p className={style.projectName}>Karthik's Website</p>
+          <p className={style.projectDescription}>
             This is my website, which has some of the things I have done,
             including a resume and an about me.
           </p>
-          <a href="index.html">LEARN MORE</a>
+          <Link href="/">LEARN MORE</Link>
         </div>
       </div>
     </header>

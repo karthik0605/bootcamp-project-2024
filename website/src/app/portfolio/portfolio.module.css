@@ -1,0 +1,48 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.projectImage {
+  width: 200px; /* Adjust this to make the image smaller */
+  height: auto;
+  border-radius: 8px;
+}
+
+.projectDetails {
+  text-align: center;
+  max-width: 800px;
+}
+
+.projectName {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.projectDescription {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project a {
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project a:hover {
+  color: #005fa3;
+}

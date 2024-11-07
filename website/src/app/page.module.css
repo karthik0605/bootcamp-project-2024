@@ -1,3 +1,47 @@
-.header{
-    text-align: center;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.about {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center;
+  max-width: 600px;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutImage img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.aboutText p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.aboutText em {
+  font-style: italic;
+  color: #007acc;
+}
+
+.aboutText strong {
+  font-weight: bold;
+  color: #007acc;
 }

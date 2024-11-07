@@ -5,12 +5,13 @@ import BlogPreview from "../../components/blogPreview";
 
 export default function Blogs() {
   return (
-    <div className={style.blogs}>
-      {blogs.map(
-        (blog) => (
+    <header className={style.blogs}>
+      <h1 className="page-title">Blogs</h1>
+      <div className={style.blogs}>
+        {blogs.map((blog) => (
           <BlogPreview {...blog} /> //spread operator passes in all fields as props
-        ) 
-      )}
-    </div>
+        ))}
+      </div>
+    </header>
   );
 }
