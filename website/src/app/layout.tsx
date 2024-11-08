@@ -2,6 +2,7 @@ import type { Metadata } from "next"; // Object to set metadata
 import { Inter } from "next/font/google"; // You can change the font to anything you want.
 import "./globals.css";
 import Navbar from "../components/navbar";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar /> {/* This sets the navbar on every page */}
         {children}
+        <Footer />
       </body>
     </html>
   );

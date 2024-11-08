@@ -6,6 +6,15 @@
   background-color: #f9f9f9;
 }
 
+.downloadLink {
+  font-size: 1.2em;
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 .downloadLink:hover {
   color: #005fa3;
 }

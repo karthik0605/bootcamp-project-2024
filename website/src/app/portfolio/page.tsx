@@ -2,9 +2,7 @@ import React from "react";
 import style from "./portfolio.module.css";
 import Link from "next/link";
 
-//change all href to links
-//change css to styles
-//if I get more projects then I can map each one
+//these will eventually become their own react components
 export default function Portfolio() {
   return (
     <header className={style.portfolio}>
