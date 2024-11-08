@@ -1,4 +1,4 @@
-import next from "next";
+import Link from "next/link";
 import React from "react";
 import style from "./blogPreview.module.css";
 import Image from "next/image";
@@ -15,6 +15,9 @@ export default function BlogPreview(props: Blog) {
           width={500}
           height={500}
         ></Image>
+        <Link href={`/${props.slug}`}>
+          <button className={style.button}>Read More</button>
+        </Link>
         <p>{props.description}</p>
         <p>{props.date}</p>
       </div>

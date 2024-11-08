@@ -1,11 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .page-title {
-    font-size: 2.0em;
-    color: #333;
-    margin: 20px 0;
-    text-align: center;
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold; /* Make the font bold */
+    color: #333; /* Dark color for the title */
+    text-align: center; /* Center align the title */
+    margin-top: 20px; /* Space above the title */
+    margin-bottom: 15px; /* Space below the title */
+    font-family: 'Arial', sans-serif; /* A clean font family */
   }
-  

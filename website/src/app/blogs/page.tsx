@@ -9,7 +9,9 @@ export default function Blogs() {
       <h1 className="page-title">Blogs</h1>
       <div className={style.blogs}>
         {blogs.map((blog) => (
-          <BlogPreview {...blog} /> //spread operator passes in all fields as props
+          <div>
+            <BlogPreview {...blog} /> 
+          </div>
         ))}
       </div>
     </header>
