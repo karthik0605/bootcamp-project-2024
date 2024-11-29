@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./blogs.module.css";
-import blogs from "../blogData";
+//import blogs from "../blogData";
 import BlogPreview from "../../components/blogPreview";
 import Blog from "../../database/blogSchema";
 import connectDB from "../../database/db";
@@ -19,9 +19,8 @@ async function getBlogs() {
 }
 
 export default async function Blogs() {
-  //delete blogData.ts as it seems pointless now
   const blogs = await getBlogs();
-  if(!blogs){
+  if (!blogs) {
     return (
       <header className={style.blogs}>
         <p>No blogs found</p>
@@ -33,9 +32,7 @@ export default async function Blogs() {
       <h1 className="page-title">Blogs</h1>
       <div className={style.blogs}>
         {blogs.map((blog) => (
-          <div>
-            <BlogPreview {...blog} />
-          </div>
+          <BlogPreview {...blog.toObject()} />
         ))}
       </div>
     </header>
