@@ -31,7 +31,7 @@ export default async function Portfolio() {
       <h1 className="page-title">Portfolio</h1>
       <div className={style.portfolio}>
         {projects.map((project) => (
-          <BlogPreview {...project.toObject()} />
+          <BlogPreview key={project.slug} {...project.toObject()} />
         ))}
       </div>
     </header>

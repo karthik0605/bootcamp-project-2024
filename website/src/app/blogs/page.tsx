@@ -32,7 +32,7 @@ export default async function Blogs() {
       <h1 className="page-title">Blogs</h1>
       <div className={style.blogs}>
         {blogs.map((blog) => (
-          <BlogPreview {...blog.toObject()} />
+          <BlogPreview key={blog.slug} {...blog.toObject()} />
         ))}
       </div>
     </header>
