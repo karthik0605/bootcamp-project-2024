@@ -28,7 +28,7 @@ export default function BlogPreview(props: Blog | Project) {
           width={500}
           height={500}
         ></Image>
-        <Link href={`/${props.slug}`}>
+        <Link href={`blogs/${props.slug}`}>
           <button className={style.button}>Read More</button>
         </Link>
         <p>{props.description}</p>

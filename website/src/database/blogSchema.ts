@@ -10,7 +10,7 @@ type Blog = {
   image: string;
   imageAlt: string;
   description: string; // for preview
-  //content: string; // for individual blog page
+  content: string; // for individual blog page
   //comments: IComment[]; // array for comments
 };
 
@@ -22,7 +22,8 @@ const blogSchema = new Schema<Blog>({
   image: { type: String, required: false },
   imageAlt: { type: String, required: false },
   description: { type: String, required: true },
-  //content: { type: String, required: true },
+  content: { type: String, required: true },
+  //comments: IComment[]; // array for comments
 });
 
 // defining the collection and model

@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-//even this file is technically not necessary other than defining the collection/model 
+//even this file is technically not necessary other than defining the collection/model
 //if using Blog as general structuring, only here for cuz its a requirement
 
 //Have to define content which actually contains the content
@@ -11,7 +11,7 @@ type Project = {
   image: string;
   imageAlt: string;
   description: string; // for preview
-  //content: string; // for individual blog page
+  content: string; // for individual blog page
   //comments: IComment[]; // array for comments
 };
 
@@ -23,10 +23,12 @@ const projectSchema = new Schema<Project>({
   image: { type: String, required: false },
   imageAlt: { type: String, required: false },
   description: { type: String, required: true },
-  //content: { type: String, required: true },
+  content: { type: String, required: true },
+  //comments: IComment[]; // array for comments
 });
 
 // defining the collection and model
-const Project = mongoose.models["projects"] || mongoose.model("projects", projectSchema);
+const Project =
+  mongoose.models["projects"] || mongoose.model("projects", projectSchema);
 
 export default Project;
