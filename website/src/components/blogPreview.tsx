@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import style from "./blogPreview.module.css";
+import style from "./preview.module.css";
 import Image from "next/image";
 import Blog from "../database/blogSchema";
 
@@ -13,7 +13,7 @@ export default function BlogPreview(props: Blog) {
   });
 
   return (
-    <div className={style.blogPreview}>
+    <div className={style.preview}>
       <h3> {props.title} </h3>
       <div>
         <Image

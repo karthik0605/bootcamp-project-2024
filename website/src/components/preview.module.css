@@ -1,4 +1,4 @@
-.blogPreview {
+.preview {
   display: flex;
   flex-direction: column; 
   align-items: center;
@@ -11,24 +11,24 @@
   transition: transform 0.2s;
 }
 
-.blogPreview:hover {
+.preview:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.blogPreview h3 {
+.preview h3 {
   font-size: 1.8em;
   color: #333;
   margin-bottom: 15px;
   text-align: center;
 }
 
-.blogPreview img {
+.preview img {
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
-.blogPreview p {
+.preview p {
   font-size: 1em;
   color: #555;
   line-height: 1.5;
@@ -36,13 +36,13 @@
   text-align: center;
 }
 
-.blogPreview p:last-of-type {
+.preview p:last-of-type {
   font-size: 0.9em;
   color: #777;
 }
 
 /* Styling for the button to ensure it is under the preview content */
-.blogPreview button {
+.preview button {
   margin-top: 20px; /* Space above the button */
   padding: 10px 20px;
   font-size: 1em;
@@ -54,6 +54,6 @@
   transition: background-color 0.3s;
 }
 
-.blogPreview button:hover {
+.preview button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
