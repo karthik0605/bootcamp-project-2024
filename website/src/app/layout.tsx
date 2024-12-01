@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar /> {/* This sets the navbar on every page */}
-        {children}
+        <div className="page-content">{children}</div>
         <Footer />
       </body>
     </html>

@@ -2,9 +2,9 @@ import Link from "next/link";
 import React from "react";
 import style from "./blogPreview.module.css";
 import Image from "next/image";
-import Blog from "../database/blogSchema";
+import Project from "../database/projectSchema";
 
-export default function BlogPreview(props: Blog) {
+export default function ProjectPreview(props: Project) {
   console.log(props.title);
   const formattedDate = new Date(props.date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -22,8 +22,8 @@ export default function BlogPreview(props: Blog) {
           width={500}
           height={500}
         ></Image>
-        <Link href={`blogs/${props.slug}`}>
-          <button className={style.button}>Read More</button>
+        <Link href={`portfolio/${props.slug}`}>
+          <button className={style.button}>Link to Project</button>
         </Link>
         <p>{props.description}</p>
         <p>{formattedDate}</p>

@@ -11,7 +11,7 @@ type Project = {
   image: string;
   imageAlt: string;
   description: string; // for preview
-  content: string; // for individual blog page
+  content: string; // for individual project page
   //comments: IComment[]; // array for comments
 };
 
@@ -24,7 +24,6 @@ const projectSchema = new Schema<Project>({
   imageAlt: { type: String, required: false },
   description: { type: String, required: true },
   content: { type: String, required: true },
-  //comments: IComment[]; // array for comments
 });
 
 // defining the collection and model

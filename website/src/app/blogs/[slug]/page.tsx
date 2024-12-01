@@ -51,8 +51,8 @@ export default async function BlogPage({ params }: Props) {
         <Image
           src={blog.image}
           alt={blog.imageAlt}
-          width={500}
-          height={500}
+          width={300}
+          height={300}
         ></Image>
         <p>{blog.content}</p>
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./blogs.module.css";
-//import blogs from "../blogData";
 import BlogPreview from "../../components/blogPreview";
 import Blog from "../../database/blogSchema";
 import connectDB from "../../database/db";

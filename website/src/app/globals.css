@@ -1,9 +1,13 @@
 .page-title {
-    font-size: 2.5em; /* Larger font size */
-    font-weight: bold; /* Make the font bold */
-    color: #333; /* Dark color for the title */
-    text-align: center; /* Center align the title */
-    margin-top: 20px; /* Space above the title */
-    margin-bottom: 15px; /* Space below the title */
-    font-family: 'Arial', sans-serif; /* A clean font family */
-  }
+  font-size: 2.5em; /* Larger font size */
+  font-weight: bold; /* Make the font bold */
+  color: #333; /* Dark color for the title */
+  text-align: center; /* Center align the title */
+  margin-top: 20px; /* Space above the title */
+  margin-bottom: 15px; /* Space below the title */
+  font-family: "Arial", sans-serif; /* A clean font family */
+}
+
+.page-content {
+  padding-bottom: 50px; /* Matches the footer's height */
+}
