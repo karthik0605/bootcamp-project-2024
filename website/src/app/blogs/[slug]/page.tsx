@@ -1,6 +1,9 @@
 import React from "react";
-import style from "../blogs.module.css"; //change import
+import style from "./blogPage.module.css";
 import Image from "next/image";
+import { IComment } from "../../../database/blogSchema";
+import Comment from "../../../components/comment";
+import { Key } from "react";
 
 type Props = {
   params: { slug: string };
@@ -31,7 +34,7 @@ export default async function BlogPage({ params }: Props) {
 
   if (!blog) {
     return (
-      <header className={style.blogs}>
+      <header className={style.noBlogsFound}>
         <p>No blogs found</p>
       </header>
     );
@@ -45,16 +48,32 @@ export default async function BlogPage({ params }: Props) {
 
   return (
     <div className={style.blogPage}>
-      <h1 className="page-title">{blog.title}</h1>
-      <h3 className={style.date}>{formattedDate}</h3>
-      <div>
+      <div className={style.blogContent}>
+        <div className={style.blogHeader}>
+          <h1>{blog.title}</h1>
+          <h3>{formattedDate}</h3>
+        </div>
         <Image
+          className={style.blogImage}
           src={blog.image}
           alt={blog.imageAlt}
-          width={300}
-          height={300}
-        ></Image>
+          width={800}
+          height={400}
+        />
         <p>{blog.content}</p>
+      </div>
+
+      <div className={style.commentSection}>
+        <h2>Comments</h2>
+        {blog.comments.length > 0 ? (
+          blog.comments.map(
+            (comment: IComment, index: Key | null | undefined) => (
+              <Comment key={index} comment={comment} />
+            )
+          )
+        ) : (
+          <p>No comments yet. Be the first to comment!</p>
+        )}
       </div>
     </div>
   );
