@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import connectDB from "../../../../database/db";
 import blogSchema from "../../../../database/blogSchema";
 
-type IParams = {
+export type IParams = {
   params: {
     slug: string;
   };
