@@ -25,8 +25,12 @@ async function getProject(slug: string) {
 }
 
 //can define other stuff inside of content
-export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
   const project = await getProject(slug);
 
   if (!project) {

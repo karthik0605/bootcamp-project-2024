@@ -6,9 +6,6 @@ import Comment from "../../../components/comment";
 import { Key } from "react";
 
 //need to add comment button which calls the api POST call
-type Params = {
-  slug: string;
-};
 
 async function getBlog(slug: string) {
   try {
@@ -29,8 +26,12 @@ async function getBlog(slug: string) {
 }
 
 //can define other stuff inside of content
-export default async function BlogPage({ params }: {params: Params}) {
-  const { slug } = params;
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
   const blog = await getBlog(slug);
 
   if (!blog) {
