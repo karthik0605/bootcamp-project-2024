@@ -4,10 +4,11 @@ import Image from "next/image";
 import { IComment } from "../../../database/blogSchema";
 import Comment from "../../../components/comment";
 import { Key } from "react";
+import { ImageParamsResult } from "next/dist/server/image-optimizer";
 
 //need to add comment button which calls the api POST call
-type Props = {
-  params: { slug: string };
+type Params = {
+  slug: string;
 };
 
 async function getBlog(slug: string) {
@@ -29,7 +30,7 @@ async function getBlog(slug: string) {
 }
 
 //can define other stuff inside of content
-export default async function BlogPage({ params }: Props) {
+export default async function BlogPage({ params }: {params: Params}) {
   const { slug } = await params;
   const blog = await getBlog(slug);
 
