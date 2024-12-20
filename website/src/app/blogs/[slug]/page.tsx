@@ -5,6 +5,7 @@ import { IComment } from "../../../database/blogSchema";
 import Comment from "../../../components/comment";
 import { Key } from "react";
 
+//need to add comment button which calls the api POST call
 type Props = {
   params: { slug: string };
 };
