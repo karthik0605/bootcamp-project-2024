@@ -4,15 +4,9 @@ import blogSchema from "../../../../../database/blogSchema";
 //import { IParams } from "../route";
 //import { IComment } from "../../../../../database/blogSchema";
 
-type IParams = {
-  params: {
-    slug: string;
-  };
-};
-
-export async function POST(req: NextRequest, { params }: IParams) {
+export async function POST(req: NextRequest) {
   const body = await req.json();
-  const slug = await params;
+  const slug = body.slug;
 
   if (!body) {
     return NextResponse.json("Blog not found");
