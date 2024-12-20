@@ -1,12 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import connectDB from "../../../../../database/db";
 import blogSchema from "../../../../../database/blogSchema";
-//import { IParams } from "../route";
-//import { IComment } from "../../../../../database/blogSchema";
 
-export async function POST(req: NextRequest) {
+export async function POST(
+  req: NextRequest,
+  {
+    params,
+  }: {
+    params: Promise<{ slug: string }>;
+  }
+) {
   const body = await req.json();
-  const slug = body.slug;
+  const slug = (await params).slug;
 
   if (!body) {
     return NextResponse.json("Blog not found");
@@ -15,8 +20,8 @@ export async function POST(req: NextRequest) {
   await connectDB();
 
   try {
-    const post = await blogSchema.findOne(slug).orFail();
-    const comment = {...body}
+    const post = await blogSchema.findOne({ slug }).orFail();
+    const comment = { ...body };
     post.comments.push(comment);
     await post.save();
 
