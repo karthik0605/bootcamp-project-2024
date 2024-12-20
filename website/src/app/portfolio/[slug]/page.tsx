@@ -2,10 +2,6 @@ import React from "react";
 import style from "../portfolio.module.css"; //change import
 import Image from "next/image";
 
-type Props = {
-  params: { slug: string };
-};
-
 async function getProject(slug: string) {
   try {
     // This fetches the project from an api endpoint that would GET the project
