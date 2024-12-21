@@ -5,7 +5,7 @@ import Image from "next/image";
 async function getProject(slug: string) {
   try {
     // This fetches the project from an api endpoint that would GET the project
-    const res = await fetch(`http://localhost:3000/api/Portfolio/${slug}`, {
+    const res = await fetch(`https://karthikbalaji-website.vercel.app/api/Portfolio/${slug}`, {
       cache: "no-store",
     });
     // This checks that the GET request was successful
