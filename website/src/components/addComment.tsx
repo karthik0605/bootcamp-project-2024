@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import style from "./comment.module.css";
 
-export default function AddComment({slug}: {slug: string}) {
+export default function AddComment({ slug }: { slug: string }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const handleSubmit = async (e: any) => {
@@ -9,10 +10,10 @@ export default function AddComment({slug}: {slug: string}) {
 
     try {
       const res = await fetch(
-        `karthikbalaji-website.vercel.app/api/Blogs/${slug}/comment`,
+        `https://karthikbalaji-website.vercel.app/api/Blogs/${slug}/comment`,
         {
           method: "POST",
-          body: JSON.stringify({ user: name, comment: comment}),
+          body: JSON.stringify({ user: name, comment: comment }),
           headers: { "Content-Type": "application/json" },
         }
       );
@@ -28,27 +29,29 @@ export default function AddComment({slug}: {slug: string}) {
   };
 
   return (
-    <div>
+    <div className={style.commentForm}>
       <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          //className={style.inputField}
-        />
-        <label>Comment:</label>
-        <input
-          type="text"
-          id="comment"
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          required
-          //className={style.inputField}
-        />
-        <button type="submit">Post Comment</button>
+        <div className={style.inputGroup}>
+          <label>Name:</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className={style.inputField}
+          />
+          <label>Comment:</label>
+          <input
+            type="text"
+            id="comment"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            required
+            className={style.inputField}
+          />
+          <button type="submit">Post Comment</button>
+        </div>
       </form>
     </div>
   );
