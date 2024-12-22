@@ -11,7 +11,7 @@ import { Key } from "react";
 async function getBlog(slug: string) {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
-    const res = await fetch(`https://karthikbalaji-website.vercel.app/api/Blogs/${slug}`, {
+    const res = await fetch(`karthikbalaji-website.vercel.app/${slug}`, {
       cache: "no-store",
     });
     // This checks that the GET request was successful

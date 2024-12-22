@@ -1,19 +1,18 @@
 "use client";
 import React, { useState } from "react";
 
-export default function AddComment(slug: any) {
+export default function AddComment({slug}: {slug: string}) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
-
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     try {
       const res = await fetch(
-        `https://karthikbalaji-website.vercel.app/api/Blogs/${slug}/comment`,
+        `karthikbalaji-website.vercel.app/api/Blogs/${slug}/comment`,
         {
           method: "POST",
-          body: JSON.stringify({ name, comment}),
+          body: JSON.stringify({ user: name, comment: comment}),
           headers: { "Content-Type": "application/json" },
         }
       );
