@@ -50,7 +50,7 @@ export default function AddComment({ slug }: { slug: string }) {
             required
             className={style.inputField}
           />
-          <button type="submit">Post Comment</button>
+          <button type="submit" className={style.button}>Post Comment</button>
         </div>
       </form>
     </div>

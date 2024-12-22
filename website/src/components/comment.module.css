@@ -65,7 +65,7 @@
   outline: none;
 }
 
-button {
+.button {
   padding: 10px 20px;
   background-color: #0070f3;
   color: white;
@@ -76,10 +76,10 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.button:hover {
   background-color: #005bb5;
 }
 
-button:active {
+.button:active {
   background-color: #004f8a;
 }
