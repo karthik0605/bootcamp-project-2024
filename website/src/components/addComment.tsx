@@ -49,6 +49,7 @@ export default function AddComment(slug: any) {
           required
           //className={style.inputField}
         />
+        <button type="submit">Post Comment</button>
       </form>
     </div>
   );
