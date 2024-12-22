@@ -39,7 +39,7 @@ export default function Contact() {
   };
   return (
     <header className={style.contact}>
-      <h1 className="page-title">Contact</h1>
+      <h1 className="page-title">Contact Me</h1>
       <form className={style.contactForm} onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input

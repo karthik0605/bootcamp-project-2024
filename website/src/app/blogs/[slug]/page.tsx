@@ -3,6 +3,7 @@ import style from "./blogPage.module.css";
 import Image from "next/image";
 import { IComment } from "../../../database/blogSchema";
 import Comment from "../../../components/comment";
+import AddComment from "../../../components/addComment";
 import { Key } from "react";
 
 //need to add comment button which calls the api POST call
@@ -67,6 +68,7 @@ export default async function BlogPage({
 
       <div className={style.commentSection}>
         <h2>Comments</h2>
+        <AddComment slug = {slug}/>
         {blog.comments.length > 0 ? (
           blog.comments.map(
             (comment: IComment, index: Key | null | undefined) => (
