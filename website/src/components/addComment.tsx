@@ -13,7 +13,7 @@ export default function AddComment(slug: any) {
         `https://karthikbalaji-website.vercel.app/api/Blogs/${slug}/comment`,
         {
           method: "POST",
-          body: JSON.stringify({ name, comment, slug }),
+          body: JSON.stringify({ name, comment}),
           headers: { "Content-Type": "application/json" },
         }
       );
